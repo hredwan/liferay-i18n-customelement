@@ -1,0 +1,9 @@
+node_modules/
+build/
+dist/
+
+# Liferay workspace language CX plugin writes auto machine-translation
+# stub files here on every build/deploy; "(Automatic Copy)" entries are
+# ignored on import anyway, so don't let them get committed.
+language/Language_*.properties
+!language/Language_ar_SA.properties

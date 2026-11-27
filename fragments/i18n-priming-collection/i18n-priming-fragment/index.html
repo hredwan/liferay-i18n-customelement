@@ -1,0 +1,22 @@
+<#-- This fragment renders NOTHING — it only primes
+	window.Liferay.Language._cache so that any i18n-poc-demo custom element on
+	the page resolves Liferay.Language.get() correctly, even when the element
+	is added as a plain widget (no FreeMarker in that render path). Add this
+	fragment to the site's Master Page Template; see README.md. -->
+<script>
+	(function() {
+		window.Liferay = window.Liferay || {};
+		window.Liferay.Language = window.Liferay.Language || {};
+		window.Liferay.Language._cache = window.Liferay.Language._cache || {};
+
+		Object.assign(window.Liferay.Language._cache, {
+<#-- GENERATED KEYS START - do not hand-edit below this line.
+			'welcome': '${languageUtil.get(locale, "welcome")?js_string}',
+			'save': '${languageUtil.get(locale, "save")?js_string}',
+			'cancel': '${languageUtil.get(locale, "cancel")?js_string}',
+			'i18npoc.greeting': '${languageUtil.get(locale, "i18npoc.greeting")?js_string}',
+			'i18npoc.magic.button': '${languageUtil.get(locale, "i18npoc.magic.button")?js_string}'
+<#-- GENERATED KEYS END -->
+		});
+	})();
+</script>
